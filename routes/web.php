@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use app\Http\Controllers\RegistrationController;
 
 /*
 |--------------------------------------------------------------------------
@@ -14,3 +15,8 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', 'Hello@index');
+
+
+Route::get('/register', 'RegistrationController@register');
+Route::post('/register', 'RegistrationController@store')->name('register');
+
